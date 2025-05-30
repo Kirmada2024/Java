@@ -18,7 +18,7 @@ class LecNumberPuzzleGame extends JFrame {
 
     public LecNumberPuzzleGame() {
         setTitle("Lec Number Puzzle");
-        setSize(330, 470); 
+        setSize(330, 470);
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
@@ -56,12 +56,26 @@ class LecNumberPuzzleGame extends JFrame {
                 }
                 break;
             case 8:
-                if(button[7].getText().isEmpty())
-                {
+                if (button[7].getText().isEmpty()) {
                     button[7].setText(button[8].getText());
                     button[8].setText("");
                 }
                 break;
+            case 4:
+                if (button[1].getText().isEmpty()) {
+                    button[1].setText(button[4].getText());
+                    button[4].setText("");
+                } else if (button[3].getText().isEmpty()) {
+                    button[3].setText(button[4].getText());
+                    button[4].setText("");
+                } 
+                else if (button[5].getText().isEmpty()) {
+                    button[5].setText(button[4].getText());
+                    button[4].setText("");
+                } else if (button[7].getText().isEmpty()) {
+                    button[7].setText(button[4].getText());
+                    button[4].setText("");
+                }                
         }
     }
 
